@@ -9,7 +9,7 @@ const Card = () => {
   const searchFunction = data
     .filter((value) => {
       if (search === "") {
-        return value;
+        return value
       } else if (
         value?.video.author.title.toLowerCase().includes(search?.toLowerCase())
       ) {

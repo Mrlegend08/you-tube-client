@@ -10,7 +10,7 @@ const Games = () => {
       } else if (
         value?.video.author.title.toLowerCase().includes(search?.toLowerCase())
       ) {
-        return value;
+        return value
       }
     })
     .slice(13, 54)

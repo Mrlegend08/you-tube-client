@@ -11,7 +11,7 @@ const Like = () => {
       } else if (
         value?.video.author.title.toLowerCase().includes(search?.toLowerCase())
       ) {
-        return value;
+        return value
       }
     })
     .slice(40, 70)
