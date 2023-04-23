@@ -1,0 +1,63 @@
+.minu {
+  position: fixed;
+  top: 85px;
+  height: 100vh;
+  z-index: 1111111;
+  padding-right: 60px;
+  background-color: #fff;
+}
+.minu1 {
+  display: none;
+}
+.bar {
+  position: sticky;
+  top: 0;
+  height: 10vh;
+  &__link {
+    display: block;
+    padding-bottom: 29px;
+  }
+}
+.icons {
+  width: 30px;
+  height: 30px;
+  opacity: 0.6;
+}
+.icons1 {
+  width: 30px;
+  height: 30px;
+}
+.sub {
+  &__text {
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .minu {
+    display: none;
+  }
+  .bar {
+    display: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  .minu1 {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    background-color: #fff !important;
+    top: 90%;
+    z-index: 111111111;
+  }
+}
+@media screen and (max-width: 400px) {
+  .minu1 {
+    top: 94%;
+    width: 360px;
+  }
+}
