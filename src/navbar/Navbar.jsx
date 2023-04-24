@@ -7,6 +7,7 @@ import logo from "./imges/logo.svg";
 import path from "./imges/ui-11.svg";
 import { useContext } from "react";
 import "./Navbar.scss";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const { togle, setTogle, vedio, setVedio, setSearch } = useContext(MyContext);
   const togleFun = () => {
@@ -16,31 +17,33 @@ const Navbar = () => {
     setVedio(!vedio);
   };
   return (
-    <div className='navbar bg-light '>
-      <div className='flex  items-center justify-between  '>
-        <div className='nav flex items-center '>
+    <div className="navbar bg-light ">
+      <div className="flex  items-center justify-between  ">
+        <div className="nav flex items-center ">
           <GiHamburgerMenu
             onClick={togleFun}
-            className='nav__burger hidden md:block'
+            className="nav__burger hidden md:block"
           />
-          <img className='px-0 pe-1 sm:px-10' src={logo} alt='logo' />
-          <div className='nav__enner relative'>
+          <Link to="">
+            <img className="px-0 pe-1 sm:px-10" src={logo} alt="logo" />
+          </Link>
+          <div className="nav__enner relative">
             <input
               onChange={(e) => setSearch(e.target.value)}
-              type='text'
-              className='pe-10 md:pe-20   block nav__input max-w-[500px] '
-              placeholder='Search'
+              type="text"
+              className="pe-10 md:pe-20   block nav__input max-w-[500px] "
+              placeholder="Search"
             />
-            <FiSearch className='absolute nav__log  right-3 md:right-7 top-4 ' />
+            <FiSearch className="absolute nav__log  right-3 md:right-7 top-4 " />
           </div>
         </div>
-        <div className='flex items-center gap-5'>
+        <div className="flex items-center gap-5">
           <BsCameraReels
             onClick={vediioFun}
-            className=' nav__vedio none hidden md:block'
+            className=" nav__vedio none hidden md:block"
           />
-          <img className='nav__qund hidden md:block' src={path} alt='msv' />
-          <img className=' ps-1 ' src={userpic} alt='msv' />
+          <img className="nav__qund hidden md:block" src={path} alt="msv" />
+          <img className=" ps-1 " src={userpic} alt="msv" />
         </div>
       </div>
     </div>
